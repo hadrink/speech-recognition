@@ -70,7 +70,6 @@ class ViewController: UIViewController {
     //-- Create preview methods
     func createPreview(size: CGSize, session: AVCaptureSession) -> AVCaptureVideoPreviewLayer? {
         previewLayer = AVCaptureVideoPreviewLayer(session: session)
-        print(size)
         previewLayer?.frame.size = size
         previewLayer?.videoGravity = AVLayerVideoGravityResizeAspectFill
         previewLayer?.connection.videoOrientation = AVCaptureVideoOrientation.portrait
