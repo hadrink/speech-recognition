@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Speech_recognition" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +17,36 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="F91-XY-55i">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wDo-kQ-ezL">
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="F91-XY-55i" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="RyV-cj-jln"/>
+                            <constraint firstItem="wDo-kQ-ezL" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Wfa-hs-PZp"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="wDo-kQ-ezL" secondAttribute="bottom" id="XnP-2h-ap5"/>
+                            <constraint firstItem="F91-XY-55i" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="ag5-gA-Gi5"/>
+                            <constraint firstAttribute="trailing" secondItem="F91-XY-55i" secondAttribute="trailing" id="jvj-RL-boX"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="F91-XY-55i" secondAttribute="bottom" id="liC-n1-Wuf"/>
+                            <constraint firstAttribute="trailing" secondItem="wDo-kQ-ezL" secondAttribute="trailing" id="rjV-pk-gjO"/>
+                            <constraint firstItem="wDo-kQ-ezL" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="tbL-cM-Imk"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="preview" destination="F91-XY-55i" id="hgs-eQ-n0n"/>
+                        <outlet property="textView" destination="wDo-kQ-ezL" id="7rk-mx-tNn"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="137.18140929535232"/>
         </scene>
     </scenes>
 </document>

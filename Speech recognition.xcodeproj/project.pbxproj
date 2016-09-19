@@ -193,6 +193,7 @@
 				TargetAttributes = {
 					7AC2129E1D900DF500EEF052 = {
 						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = 356ZH6XUVH;
 						ProvisioningStyle = Automatic;
 					};
 					7AC212B21D900DF600EEF052 = {
@@ -410,6 +411,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 356ZH6XUVH;
 				INFOPLIST_FILE = "Speech recognition/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "rplay.Speech-recognition";
@@ -422,6 +424,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 356ZH6XUVH;
 				INFOPLIST_FILE = "Speech recognition/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "rplay.Speech-recognition";
